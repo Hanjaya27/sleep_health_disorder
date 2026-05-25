@@ -55,14 +55,20 @@ MODEL_FILE = "sleep_disorder_model.pkl"
 
 if not os.path.exists(MODEL_FILE):
 
-    file_id = "1-9cpXEtw2bNqIEOdHt1hGCxBXJflQOaM"
+    file_id = "1MQ_WN1j8OEgUx3TTmO8dyZbY2RfBpbhY"
 
     gdown.download(
         f"https://drive.google.com/uc?id={file_id}",
         MODEL_FILE,
         quiet=False
     )
+import sklearn
+import numpy
+import joblib
 
+st.write("sklearn:", sklearn.__version__)
+st.write("numpy:", numpy.__version__)
+st.write("joblib:", joblib.__version__)
 model = joblib.load(MODEL_FILE)
 
 df = pd.read_csv(
