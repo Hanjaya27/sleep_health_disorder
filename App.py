@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-#import matplotlib.pyplot as plt
-#import seaborn as sns
+import matplotlib.pyplot as plt
+import seaborn as sns
 import joblib
 
 st.set_page_config(
@@ -66,9 +66,9 @@ import sklearn
 import numpy
 import joblib
 
-st.write("sklearn:", sklearn.__version__)
-st.write("numpy:", numpy.__version__)
-st.write("joblib:", joblib.__version__)
+#st.write("sklearn:", sklearn.__version__)
+#st.write("numpy:", numpy.__version__)
+#st.write("joblib:", joblib.__version__)
 model = joblib.load(MODEL_FILE)
 
 df = pd.read_csv(
